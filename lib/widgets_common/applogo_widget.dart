@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 Widget applogoWidget() {
   //using velocity x here
-  return Image.asset(icAppleLogo)
+  return Image.asset(icAppLogo)
       .box
       .white
       .size(77, 77)

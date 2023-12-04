@@ -1,4 +1,5 @@
 import 'package:emart_app/consts/consts.dart';
+import 'package:emart_app/widgets_common/applogo_widget.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,8 +23,18 @@ class _SplashScreenState extends State<SplashScreen> {
                 icSplashBg,
                 width: 300,
               ),
-            )
+            ),
+            20.heightBox,
+            applogoWidget(),
+            10.heightBox,
+            appname.text.fontFamily(bold).size(22).white.make(),
+            5.heightBox,
+            appversion.text.white.make(),
+            const Spacer(),
+            credits.text.white.fontFamily(semibold).make(),
+            30.heightBox
           ],
+//splash screen UI is completed
         ),
       ),
     );
