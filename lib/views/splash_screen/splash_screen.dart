@@ -1,6 +1,8 @@
 import 'package:emart_app/consts/consts.dart';
+import 'package:emart_app/views/login_screen.dart';
 import 'package:emart_app/widgets_common/applogo_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,6 +12,20 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  // creating the fucntion to change the screen after 3 seconds
+  changeSreen() {
+    Future.delayed(const Duration(seconds: 3), () {
+      // using getX
+      Get.to(() => const LoginScreen());
+    });
+  }
+
+  @override
+  void initState() {
+    changeSreen();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
