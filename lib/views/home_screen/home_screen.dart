@@ -223,16 +223,51 @@ class HomeScreen extends StatelessWidget {
                             .make();
                       }),
                   // all products section
-                  // 20.heightBox,
-                  // GridView.builder(
-                  //     shrinkWrap: true,
-                  //     itemCount: 6,
-                  //     gridDelegate:
-                  //         const SliverGridDelegateWithFixedCrossAxisCount(
-                  //             crossAxisCount: 2),
-                  //     itemBuilder: (context, index) {
-                  //       return Container();
-                  //     })
+                  20.heightBox,
+                  GridView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 6,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 8,
+                              crossAxisSpacing: 8,
+                              mainAxisExtent: 300),
+                      itemBuilder: (context, index) {
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              imgP5,
+                              height: 200,
+                              width: 200,
+                              fit: BoxFit.cover,
+                            ),
+                            const Spacer(),
+                            "Laptop 4GB/64GB"
+                                .text
+                                .fontFamily(semibold)
+                                .color(darkFontGrey)
+                                .make(),
+                            10.heightBox,
+                            "\$600"
+                                .text
+                                .color(redColor)
+                                .fontFamily(bold)
+                                .size(16)
+                                .make(),
+                            10.heightBox,
+                          ],
+                        )
+                            .box
+                            .white
+                            .rounded
+                            .padding(const EdgeInsets.all(12))
+                            .roundedSM
+                            .margin(const EdgeInsets.symmetric(horizontal: 4))
+                            .make();
+                      })
                 ],
               ),
             ),
