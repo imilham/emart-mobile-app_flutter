@@ -53,3 +53,20 @@ const womenClothing = "Women Clothing",
     jwellery = "Jwellery",
     cellPhone = "Cellphoe & Tab",
     furniture = "Furniture";
+
+// item details strings
+
+const video = "Video",
+    reviews = "Reviews",
+    sellerPolicy = "Seller Policy",
+    returnPolicy = "Return Policy",
+    supportPolicy = "Support Policy";
+
+const productsYouMayLike = "Products you may also like";
+
+// account strings
+
+const logout = "Log out";
+
+const wishlist = "My Wishlist", orders = "My Orders", messages = "Messages";
+

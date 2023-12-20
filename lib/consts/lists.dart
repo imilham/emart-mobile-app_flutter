@@ -41,3 +41,17 @@ const categoryImages = [
   imgFc8,
   imgFc9
 ];
+
+// item details lists
+const itemDetailsButtonList = [
+  video,
+  reviews,
+  privacyPolicy,
+  returnPolicy,
+  supportPolicy
+];
+
+// acount profile lists
+
+const profileButtonList = [orders, wishlist, messages];
+const profileButtonIcon = [icOrder, icOrder, icMessages];
