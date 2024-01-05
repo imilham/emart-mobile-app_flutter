@@ -1,5 +1,4 @@
 import 'package:emart_app/consts/consts.dart';
-import 'package:emart_app/consts/images.dart';
 
 const socilaIconList = [icFacebookLogo, icGoogleLogo, icTwitterLogo];
 
