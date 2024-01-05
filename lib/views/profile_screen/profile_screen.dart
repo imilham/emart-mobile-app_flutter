@@ -1,8 +1,12 @@
 import 'package:emart_app/consts/consts.dart';
 import 'package:emart_app/consts/lists.dart';
+import 'package:emart_app/controllers/auth_controller.dart';
+import 'package:emart_app/views/auth_screen/login_screen.dart';
 import 'package:emart_app/views/profile_screen/components/details_card.dart';
+import 'package:emart_app/views/profile_screen/edit_profile_screen.dart';
 import 'package:emart_app/widgets_common/bg_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -21,7 +25,9 @@ class ProfileScreen extends StatelessWidget {
                 child: Icon(
                   Icons.edit,
                   color: whiteColor,
-                )).onTap(() {}),
+                )).onTap(() {
+              Get.to(() => const EditProfileScreen());
+            }),
           ),
 
           // user details section
@@ -46,7 +52,10 @@ class ProfileScreen extends StatelessWidget {
                 OutlinedButton(
                     style: OutlinedButton.styleFrom(
                         side: const BorderSide(color: whiteColor)),
-                    onPressed: () {},
+                    onPressed: () async {
+                      await Get.put(AuthController()).signoutMethod(context);
+                      Get.offAll(() => const LoginScreen());
+                    },
                     child: logout.text.fontFamily(semibold).white.make()),
               ],
             ),
